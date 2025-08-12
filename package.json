@@ -1,37 +1,21 @@
 {
   "name": "forkify",
   "version": "1.0.0",
-  "description": "search over 1,000,000 food recipes",
+  "description": "Recipe application",
   "default": "index.html",
   "scripts": {
     "start": "parcel index.html",
     "build": "parcel build index.html --dist-dir ./dist"
   },
   "author": "Truce Ramcharitar",
-  "license": "MIT",
+  "license": "ISC",
   "devDependencies": {
-    "@parcel/transformer-sass": "^2.12.0",
-    "parcel": "^2.12.0",
-    "sass": "^1.75.0"
+    "parcel": "^2.0.0-beta.1",
+    "sass": "^1.26.10"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DevTruce/javascript-bootcamp"
-  },
-  "keywords": [
-    "find food",
-    "find food recipes",
-    "html",
-    "css",
-    "scss",
-    "javascript"
-  ],
-  "browserList": [
-    "last 10 versions"
-  ],
   "dependencies": {
-    "core-js": "^3.37.0",
+    "core-js": "^3.6.5",
     "fractional": "^1.0.0",
-    "regenerator-runtime": "^0.14.1"
+    "regenerator-runtime": "^0.13.7"
   }
 }
