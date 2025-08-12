@@ -1,14 +1,14 @@
-import { MODAL_CLOSE_SEC } from './config.js';
-import * as model from './model.js';
-import addRecipeView from './views/addRecipeView.js';
-import bookmarksView from './views/bookmarksView.js';
-import paginationView from './views/paginationView.js';
-import recipeView from './views/recipeView.js';
-import resultsView from './views/resultsView.js';
-import searchView from './views/searchView.js';
+import { MODAL_CLOSE_SEC } from "./config.js";
+import * as model from "./model.js";
+import addRecipeView from "./views/addRecipeView.js";
+import bookmarksView from "./views/bookmarksView.js";
+import paginationView from "./views/paginationView.js";
+import recipeView from "./views/recipeView.js";
+import resultsView from "./views/resultsView.js";
+import searchView from "./views/searchView.js";
 
-import 'core-js/stable';
-import 'regenerator-runtime/runtime';
+import "core-js/stable";
+import "regenerator-runtime/runtime";
 
 const controlRecipes = async function () {
   try {
@@ -106,14 +106,14 @@ const controlAddRecipe = async function (newRecipe) {
     bookmarksView.render(model.state.bookmarks);
 
     // Change ID in URL
-    window.history.pushState(null, '', `#${model.state.recipe.id}`);
+    window.history.pushState(null, "", `#${model.state.recipe.id}`);
 
     // Close form window
     setTimeout(function () {
       addRecipeView.toggleWindow();
     }, MODAL_CLOSE_SEC * 1000);
   } catch (err) {
-    console.error('💥', err);
+    console.error("💥", err);
     addRecipeView.renderError(err.message);
   }
 };
